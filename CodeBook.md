@@ -1,7 +1,8 @@
 #Variables
 X_train, Y_train, X_test, Y_test - data sets we import into R
->features - data set from features.txt we import into R
->features_v - a character vector with features names
+
+features - data set from features.txt we import into R
+features_v - a character vector with features names
 colnames(X_train), colnames(X_test) - Assigning names from features_v vector to X_train and X_test data frames
 X_combined <- rbind(X_train,X_test) - joined X_train and X_test data frames
 activity_labels, subject_test, subject_train - imported activity labels, subject_test and subject_train into R
