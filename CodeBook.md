@@ -1,3 +1,4 @@
+#Variables
 X_train, Y_train, X_test, Y_test - data sets we import into R
 features - data set from features.txt we import into R
 features_v - a character vector with features names
