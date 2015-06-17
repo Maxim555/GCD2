@@ -1,4 +1,4 @@
-###Variables
+###Beginning
 X_train, Y_train, X_test, Y_test - data sets we import into R
 
 features - data set from features.txt we import into R
@@ -32,7 +32,7 @@ subject_combined - joint subject data frame
 step2_df2 - one big data set
 
 
-#Assigning Activity values to words
+###Assigning Activity values to words
 
 step2_df2$Activity[step2_df2$Activity == 1] <- "WALKING"
 
@@ -47,15 +47,15 @@ step2_df2$Activity[step2_df2$Activity == 5] <- "STANDING"
 step2_df2$Activity[step2_df2$Activity == 6] <- "LAYING"
 
 
-#Rename V1 column to ID
+###Rename V1 column to ID
 
 step2_df2 <- rename(step2_df2,ID = V1)
 
-#Create a new joint ID_Activity column
+###Create a new joint ID_Activity column
 
 step2_df2$ID_Activity <- as.character(paste(step2_df2$ID,step2_df2$Activity,sep=""))
 
-#Group and summarize final dataframe
+###Group and summarize final dataframe
 
 df <- step2_df2 %>%group_by(ID_Activity) %>% summarise_each(funs(mean))
 
